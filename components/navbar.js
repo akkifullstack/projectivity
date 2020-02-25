@@ -1,24 +1,9 @@
 import React, { useState } from "react";
-import { Navbar, Form } from "react-bootstrap";
+import { Navbar } from "react-bootstrap";
 import { useRouter } from "next/router";
 import { nav } from "./common";
 import Tooltip from "react-tooltip-lite";
-import Link from "next/link";
-import css from "../static/css/nav.css";
-import { Button } from "react-bootstrap";
-import Switch from "react-bootstrap-switch";
-import {
-  Dropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem
-} from "react-bootstrap";
-
-const Sidenav = () => {
-  let router = useRouter();
-  const [active, setActive] = useState(false);
-  const [activekey, setKeyActive] = useState(0);
-  const [toggleActive, settoggleActive] = useState(false);
+const Navbar = () => {
   return (
     <>
       <div class="">
@@ -81,12 +66,19 @@ const Sidenav = () => {
               )}
             </Dropdown>
           </div>
-          <div class="switch-toogle">
-            <label class="switch">
-              <input type="checkbox" checked />
-              <span class="slider round"></span>
-            </label>
-          </div>
+          <Form>
+            <Form.Check
+              type="switch"
+              id="custom-switch"
+              label="Check this switch"
+            />
+            <Form.Check
+              disabled
+              type="switch"
+              label="disabled switch"
+              id="disabled-custom-switch"
+            />
+          </Form>
         </ul>
       </div>
     </>

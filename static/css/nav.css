@@ -1,7 +1,9 @@
 /* @import url('../../node_modules/react-portal-hint/default.css"'); */
+
 body {
   overflow-y: hidden;
 }
+
 .container {
   width: 1254px;
   margin: 0 auto;
@@ -16,7 +18,6 @@ body {
   padding-right: 10px;
   padding-top: 14px;
   padding-left: 0;
- 
 }
 
 .circle {
@@ -26,11 +27,9 @@ body {
   border-radius: 10px;
   margin-left: 10px;
   margin-top: -10px;
-  margin-bottom: 8px;
 }
 
-.navbar .far,
-.fas {
+.navbar .far, .fas {
   color: #fff;
   font-size: 12px;
   padding-top: 10px;
@@ -58,11 +57,12 @@ body {
 }
 
 .logo {
-  margin-bottom: 5rem;
+  margin-bottom: 8rem;
   padding-left: 10px;
+  margin-top: 20px;
 }
 
-.fa-user-circle {
+.fab.fa-autoprefixer {
   font-size: 30px;
   color: #fff;
 }
@@ -75,6 +75,7 @@ body {
 .bottom-toggle {
   margin-top: 9rem;
 }
+
 .react-tooltip-lite {
   background: #333;
   color: white;
@@ -85,6 +86,7 @@ body {
 .react-tooltip-lite-arrow {
   border-color: #333;
 }
+
 .more-icon {
   padding-left: 6px;
 }
@@ -92,19 +94,23 @@ body {
 .more-icon .fa-ellipsis-v {
   font-size: 18px;
 }
+
 .btn-basic {
   background-color: unset;
   border-style: none;
 }
+
 .btn-basic:focus {
   outline: none;
 }
+
 .dropdown-menu {
   border: 1px solid #cdc;
   display: inline-grid;
   background-color: #fff;
   padding: 12px;
 }
+
 .dropdown-item {
   text-align: left;
   color: #000;
@@ -112,15 +118,92 @@ body {
   text-decoration: none;
   padding-bottom: 18px;
 }
+
 .active {
-  border-left: 4px solid #fff;
+  border-left: 2px solid #fff;
   border-right: none;
   border-top: 5px solid transparent;
-  border-bottom: 50px solid transparent;
   border-bottom: 7px solid transparent;
   width: 0px;
   height: 14px;
 }
-.fa-ellipsis-h{
+
+.fa-ellipsis-h {
   font-size: 16px;
+}
+
+.active .circle {
+  background-color: white;
+  height:32px;
+  width: 32px;
+  border-radius: 12px;
+}
+
+.active .circle .fas {
+  color: blue;
+}
+.active .circle .far {
+  color: blue;
+}
+.switch-toogle{
+  margin-top:8rem;
+}
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 20px;
+  height: 10px;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+    content: "";
+    height: 8px;
+    width: 8px;
+    left: -16px;
+    bottom: 0px;
+    background-color: white;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color:#0034f2d4;
+  border: 1px solid #fff;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
 }
