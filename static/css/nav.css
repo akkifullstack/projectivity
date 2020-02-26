@@ -207,3 +207,10 @@ input:checked + .slider:before {
 .slider.round:before {
   border-radius: 50%;
 }
+.react-tooltip-lite-arrow.react-tooltip-lite-right-arrow{
+  border-top: 0!important;
+  border-bottom: 0!important;
+}
+.react-tooltip-lite{
+  left:42.5px !important;
+}
